@@ -26,7 +26,7 @@ type Msg
 
 init : () -> ( Screen, Cmd Msg )
 init () =
-    ( Playground.toScreen 600 600, Cmd.none )
+    ( Playground.toScreen 0 0, Cmd.none )
 
 
 view : Screen -> Html Msg
@@ -57,7 +57,7 @@ playground =
         , Element.Border.color (Element.rgb 0 0 0)
         , Element.Border.width borderWidth
         ]
-        (Element.html (Playground.render creationId (Playground.toScreen 960 540) Design.creation))
+        (Element.html (Playground.render creationId (Playground.toScreen 1920 1080) Design.creation))
 
 
 actions : Element Msg
